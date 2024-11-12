@@ -114,7 +114,32 @@ header{
     flex-grow: 0.4;
     justify-content: flex-end;
     align-items:flex-end;
-    
+
+}
+
+.header-menu-mobile{
+    display: none;
+    background-color: rgb(17, 255, 0);
+}
+.header-menu-mobile-items{
+    list-style-type: none;
+}
+.header-menu-mobile-item{
+    font-family:'DarkXShadowSkyrim';
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration:none;
+}
+.header-menu-mobile-item-buy{
+    font-family:'DarkXShadowSkyrim';
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration:none;
+}
+#check:checked ~ .header-menu-mobile{
+    display: block;
 }
 
 .header-menu-nav-items{
@@ -395,8 +420,6 @@ main{
     width: 100%;
     height: 70%;
     overflow: hidden;
-
-    
 }
 
 .races-list-item-img{
@@ -856,14 +879,15 @@ bottom: 0;
   
     .header-menu-logo{
         display: block;
-        border-color: rgb(0, 255, 38);
-        border-style: dotted;
         cursor: pointer;
     }
     .header-logo{
         height: 95%;
     }
-    .header-menu-nav-items{
+    .header-menu-nav{
+        display: none;
+    }
+    .header-menu-mobile{
         font-size: 3rem;
         text-shadow: 10px 10px 20px rgba(245, 245, 245, 0.5);
         background-color: #1e1e1e;
@@ -874,22 +898,50 @@ bottom: 0;
         align-items: center;
         justify-content: space-around;
         overflow: hidden;
-        height: 0;
+        top: 100%;
+        height: 20rem;
+        width:90%;
     }
 
-    .header-menu-nav-items>li{
+    .header-menu-mobile-items{
         width: 100%;
-        height: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+    }
+    .header-menu-mobile-items>li{
+        width: 100%;
+        height:100%;
         display: flex;
         justify-content: center;
         align-items:center;
         border-color: #00000081;
         border-style: solid;
-        overflow: hidden;
+    
+       margin-bottom: 5%;
+       
     }
-    .checkbox:checked + .header-menu-nav-items{
-        height: 40vh;
-    }/*no funciona :'(  y no se porque*/
+    .checkbtn {
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+    .header-menu{
+       height: 100%;
+       width: 100%;
+    }
+
+    #check:checked ~ .header-menu {
+       
+        background-color: #fcb045;
+    } 
+    #check:checked ~ .header-menu{
+        display: block;
+    }
+      /*no funciona :'(  y no se porque*/
     
     /*---------MAIN--------------------------------*/
 
